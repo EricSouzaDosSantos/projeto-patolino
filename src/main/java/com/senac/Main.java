@@ -34,16 +34,15 @@ public class Main {
             char respotaUsuario1 = sc.next().toUpperCase().charAt(0);
 
             if (respotaUsuario1 == alternativaFase1A || respotaUsuario1 == alternativaFase1C) {
-                System.out.println("");
+                System.out.println(" ");
                 System.out.println("Resposta Errada!");
-                System.out.println("");
+                System.out.println(" ");
                 System.out.println("Resposta Correta B");
             } else if (respotaUsuario1 == alternativaFase1B) {
                 System.out.println("Resposta  Correta!");
             }
 
-        }
-        catch (InterruptedException exception) {
+        } catch (InterruptedException exception) {
         }
     }
 }
