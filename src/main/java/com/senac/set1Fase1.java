@@ -2,7 +2,7 @@ package com.senac;
 
 import java.util.Scanner;
 
-public class Main {
+public class set1Fase1 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -41,7 +41,6 @@ public class Main {
             } else if (respotaUsuario1 == alternativaFase1B) {
                 System.out.println("Resposta  Correta!");
             }
-
         } catch (InterruptedException exception) {
         }
     }
