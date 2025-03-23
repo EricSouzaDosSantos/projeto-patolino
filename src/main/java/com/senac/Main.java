@@ -2,41 +2,48 @@ package com.senac;
 
 import java.util.Scanner;
 
-import com.senac.service.PerguntaService;
-
 public class Main {
     public static void main(String[] args) {
-        PerguntaService jogo = new PerguntaService();
-        Scanner scanner = new Scanner(System.in);
 
-        while (true) {
-            System.out.println("1 - Adicionar Pergunta");
-            System.out.println("2 - Jogar");
-            System.out.println("3 - Sair");
-            System.out.print("Escolha: ");
-            int escolha = scanner.nextInt();
-            scanner.nextLine();
+        Scanner sc = new Scanner(System.in);
 
-            switch (escolha) {
-                case 1:
-                    System.out.print("Digite a pergunta: ");
-                    String pergunta = scanner.nextLine();
-                    System.out.print("Digite a resposta: ");
-                    String resposta = scanner.nextLine();
-                    System.out.print("Digite a fase (Estrutura de Dados, Algoritmos, Banco de Dados, Redes): ");
-                    String fase = scanner.nextLine();
-                    jogo.adicionarPergunta(pergunta, resposta, fase);
-                    break;
-                // ..
-                case 2:
-                    jogo.jogar();
-                    break;
-                case 3:
-                    System.out.println("Saindo...");
-                    return;
-                default:
-                    System.out.println("Opção inválida!");
+        try {
+
+            char alternativaFase1A = 'A';
+            char alternativaFase1B = 'B';
+            char alternativaFase1C = 'C';
+
+            System.out.println("");
+
+            System.out.println("Fase 1 - O Feiticeiro das Variáveis!");
+            System.out.println("");
+            System.out.println("Pergunta: Qual tipo armazena números inteiros em Java?");
+            System.out.println("");
+
+            Thread.sleep(1000);
+
+            System.out.println("a) float");
+            Thread.sleep(500);
+            System.out.println("b) int");
+            Thread.sleep(500);
+            System.out.println("c) double");
+            Thread.sleep(500);
+            System.out.println("");
+            System.out.println("Digite a respota correta a, b ou c");
+
+            char respotaUsuario1 = sc.next().toUpperCase().charAt(0);
+
+            if (respotaUsuario1 == alternativaFase1A || respotaUsuario1 == alternativaFase1C) {
+                System.out.println("");
+                System.out.println("Resposta Errada!");
+                System.out.println("");
+                System.out.println("Resposta Correta B");
+            } else if (respotaUsuario1 == alternativaFase1B) {
+                System.out.println("Resposta  Correta!");
             }
+
+        }
+        catch (InterruptedException exception) {
         }
     }
 }
