@@ -13,7 +13,6 @@ public class JogoService extends JFrame {
 
     private final PerguntaService perguntaService;
     private final RankingService rankingService;
-
     private String[] nicks;
     private int jogadorAtual = 0;
     private int[] vidasJogadores;
@@ -21,26 +20,30 @@ public class JogoService extends JFrame {
     private Map<Integer, Integer> fasePorJogador;
     private Map<Integer, Set<Pergunta>> perguntasRespondidas;
     private Set<Pergunta> perguntasJaUtilizadasGlobalmente;
-
-
     private JLabel perguntaLabel;
     private JRadioButton[] alternativasRadio;
     private ButtonGroup grupoAlternativas;
     private JButton responderButton;
     private JLabel statusLabel;
-
     private Timer timer;
-    private int tempoRestante = 15;
+    private int tempoInicialDaPergunta;
+    private int tempoRestante;
     private JLabel timerLabel;
-
     private JLabel cabecalhoLabel;
-
     private Pergunta perguntaAtual;
+    private int pontuacaoMinima;
+    private String[] nomeDosChefes = {
+            "Feitiçolo, o Descompilador",
+            "Varilouco, o Guardião dos Nomes",
+            "Operadark, o Quebrador de Lógicas",
+            "Ifador, o Mestre dos Desvios",
+            "Encapsulador Supremo Patolôncio"
+    };
 
     public JogoService(PerguntaService perguntaService, RankingService rankingService) {
         this.perguntaService = perguntaService;
         this.rankingService = rankingService;
-
+        configurarTema();
         setTitle("Jogo de Perguntas");
         setSize(700, 400);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -48,26 +51,50 @@ public class JogoService extends JFrame {
         initComponents();
     }
 
+    private void configurarTema() {
+        UIManager.put("Panel.background", Color.BLACK);
+        UIManager.put("OptionPane.background", Color.BLACK);
+        UIManager.put("OptionPane.messageForeground", Color.GREEN);
+        UIManager.put("OptionPane.buttonFont", new Font("Monospaced", Font.PLAIN, 16));
+        UIManager.put("OptionPane.messageFont", new Font("Monospaced", Font.PLAIN, 16));
+        UIManager.put("OptionPane.foreground", Color.GREEN);
+
+        UIManager.put("Button.background", Color.GREEN);
+        UIManager.put("Button.foreground", Color.BLACK);
+        UIManager.put("Button.font", new Font("Monospaced", Font.PLAIN, 16));
+
+        UIManager.put("Label.font", new Font("Monospaced", Font.PLAIN, 16));
+        UIManager.put("Label.foreground", Color.GREEN);
+
+        UIManager.put("RadioButton.background", Color.BLACK);
+        UIManager.put("RadioButton.foreground", Color.GREEN);
+        UIManager.put("RadioButton.font", new Font("Monospaced", Font.PLAIN, 16));
+
+        UIManager.put("TextField.background", Color.BLACK);
+        UIManager.put("TextField.foreground", Color.GREEN);
+        UIManager.put("TextField.font", new Font("Monospaced", Font.PLAIN, 16));
+    }
+
     private void initComponents() {
         JPanel painelPrincipal = new JPanel();
         painelPrincipal.setLayout(new BoxLayout(painelPrincipal, BoxLayout.Y_AXIS));
         painelPrincipal.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
 
-        cabecalhoLabel = new JLabel("Jogador: --- | Fase: ---");
+        cabecalhoLabel = new JLabel("Jogador: --- | Chefão: ---");
         cabecalhoLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
-        cabecalhoLabel.setFont(new Font("Arial", Font.BOLD, 16));
+        cabecalhoLabel.setFont(new Font("Monospaced", Font.BOLD, 16));
         painelPrincipal.add(cabecalhoLabel);
 
         timerLabel = new JLabel("Tempo restante: 15s");
         timerLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
-        timerLabel.setFont(new Font("Arial", Font.BOLD, 14));
+        timerLabel.setFont(new Font("Monospaced", Font.BOLD, 14));
         timerLabel.setForeground(Color.RED);
         painelPrincipal.add(timerLabel);
 
         perguntaLabel = new JLabel("Pergunta");
         perguntaLabel.setHorizontalAlignment(SwingConstants.CENTER);
         perguntaLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
-        perguntaLabel.setFont(new Font("Arial", Font.PLAIN, 16));
+        perguntaLabel.setFont(new Font("Monospaced", Font.PLAIN, 16));
         painelPrincipal.add(Box.createVerticalStrut(15));
         painelPrincipal.add(perguntaLabel);
 
@@ -89,7 +116,7 @@ public class JogoService extends JFrame {
 
         for (int i = 0; i < 4; i++) {
             alternativasRadio[i] = new JRadioButton();
-            alternativasRadio[i].setFont(new Font("Arial", Font.PLAIN, 14));
+            alternativasRadio[i].setFont(new Font("Monospaced", Font.PLAIN, 14));
             grupoAlternativas.add(alternativasRadio[i]);
             alternativasRadio[i].setAlignmentX(Component.LEFT_ALIGNMENT);
             alternativasPanel.add(alternativasRadio[i]);
@@ -105,13 +132,13 @@ public class JogoService extends JFrame {
 
         responderButton = new JButton("Responder");
         responderButton.setAlignmentX(Component.CENTER_ALIGNMENT);
-        responderButton.setFont(new Font("Arial", Font.BOLD, 14));
+        responderButton.setFont(new Font("Monospaced", Font.BOLD, 14));
         responderButton.addActionListener(this::processarResposta);
         painelPrincipal.add(responderButton);
 
         statusLabel = new JLabel(" ");
         statusLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
-        statusLabel.setFont(new Font("Arial", Font.ITALIC, 12));
+        statusLabel.setFont(new Font("Monospaced", Font.ITALIC, 12));
         statusLabel.setForeground(Color.BLUE);
         painelPrincipal.add(Box.createVerticalStrut(10));
         painelPrincipal.add(statusLabel);
@@ -120,17 +147,42 @@ public class JogoService extends JFrame {
     }
 
 
-    public void jogar(String[] nicks) {
+    public void jogar(String[] nicks, int nivel) {
         this.nicks = nicks;
         int numJogadores = nicks.length;
-
         vidasJogadores = new int[numJogadores];
-        Arrays.fill(vidasJogadores, 3);
         pontuacoes = new int[numJogadores];
         fasePorJogador = new HashMap<>();
 
         perguntasRespondidas = new HashMap<>();
         perguntasJaUtilizadasGlobalmente = new HashSet<>();
+
+        if (nivel == 1){
+            tempoInicialDaPergunta = 25;
+            Arrays.fill(vidasJogadores, 5);
+            pontuacaoMinima = 30;
+        } else if (nivel == 2) {
+            tempoInicialDaPergunta = 20;
+            Arrays.fill(vidasJogadores, 4);
+            pontuacaoMinima = 40;
+        } else if (nivel == 3) {
+            tempoInicialDaPergunta = 20;
+            Arrays.fill(vidasJogadores, 3);
+            pontuacaoMinima = 50;
+        } else if (nivel == 4) {
+            tempoInicialDaPergunta = 15;
+            Arrays.fill(vidasJogadores, 2);
+            pontuacaoMinima = 60;
+        }else if (nivel == 5) {
+            tempoInicialDaPergunta = 10;
+            Arrays.fill(vidasJogadores, 1);
+            pontuacaoMinima = 70;
+        }else{
+            JOptionPane.showMessageDialog(this, "Nível selecionado invélido", "Erro", JOptionPane.ERROR_MESSAGE);
+        }
+
+        tempoRestante = tempoInicialDaPergunta;
+
 
         for (int i = 0; i < numJogadores; i++) {
             fasePorJogador.put(i, 1);
@@ -199,7 +251,7 @@ public class JogoService extends JFrame {
         perguntasRespondidas.get(jogadorAtual).add(perguntaAtual);
         perguntasJaUtilizadasGlobalmente.add(perguntaAtual);
 
-        cabecalhoLabel.setText("Jogador: " + nicks[jogadorAtual] + " | Fase " + faseNumeroJogador + ": " + nomeFase);
+        cabecalhoLabel.setText("Jogador: " + nicks[jogadorAtual] + " | Chefão " + faseNumeroJogador + " ("+nomeDosChefes[faseNumeroJogador-1]+"): " + nomeFase);
         perguntaLabel.setText("<html><body style='text-align: center;'>" + perguntaAtual.getPergunta() + "</body></html>");
 
         String[] alternativas = perguntaAtual.getAlternativas();
@@ -221,8 +273,7 @@ public class JogoService extends JFrame {
         if (timer != null && timer.isRunning()) {
             timer.stop();
         }
-
-        tempoRestante = 15;
+        tempoRestante = tempoInicialDaPergunta;
         timerLabel.setText("Tempo restante: " + tempoRestante + "s");
 
         timer = new Timer(1000, new AbstractAction() {
@@ -286,7 +337,7 @@ public class JogoService extends JFrame {
             JOptionPane.showMessageDialog(this, "Correto!\n" + perguntaService.getMensagemDeAcerto());
             pontuacoes[jogadorAtual] += 10;
 
-            if (pontuacoes[jogadorAtual] > 0 && pontuacoes[jogadorAtual] % 50 == 0) {
+            if (pontuacoes[jogadorAtual] > 0 && pontuacoes[jogadorAtual] % pontuacaoMinima == 0) {
                 int faseAtualDoJogador = fasePorJogador.get(jogadorAtual);
                 int proximaFasePotencial = faseAtualDoJogador + 1;
 

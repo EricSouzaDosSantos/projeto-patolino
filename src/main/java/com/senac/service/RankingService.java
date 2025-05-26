@@ -2,18 +2,43 @@ package com.senac.service;
 
 import com.senac.model.Jogador;
 
-import javax.swing.*; // Importa componentes Swing
-import java.awt.*;    // Importa componentes AWT como Font, BorderLayout, Frame, etc.
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import javax.swing.*;
+import java.awt.*;
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Collections; // Para Collections.sort se preferir
-import java.util.Comparator;  // Para Comparator.comparingInt
+import java.util.Comparator;
 import java.util.List;
 
 public class RankingService {
     private static final String ARQUIVO_RANKING = "src/main/resources/ranking.txt";
+
+    public RankingService() {
+        configurarTema();
+    }
+
+    private void configurarTema() {
+        UIManager.put("Panel.background", Color.BLACK);
+        UIManager.put("OptionPane.background", Color.BLACK);
+        UIManager.put("OptionPane.messageForeground", Color.GREEN);
+        UIManager.put("OptionPane.buttonFont", new Font("Monospaced", Font.PLAIN, 16));
+        UIManager.put("OptionPane.messageFont", new Font("Monospaced", Font.PLAIN, 16));
+        UIManager.put("OptionPane.foreground", Color.GREEN);
+
+        UIManager.put("Button.background", Color.GREEN);
+        UIManager.put("Button.foreground", Color.BLACK);
+        UIManager.put("Button.font", new Font("Monospaced", Font.PLAIN, 16));
+
+        UIManager.put("Label.font", new Font("Monospaced", Font.PLAIN, 16));
+        UIManager.put("Label.foreground", Color.GREEN);
+
+        UIManager.put("RadioButton.background", Color.BLACK);
+        UIManager.put("RadioButton.foreground", Color.GREEN);
+        UIManager.put("RadioButton.font", new Font("Monospaced", Font.PLAIN, 16));
+
+        UIManager.put("TextField.background", Color.BLACK);
+        UIManager.put("TextField.foreground", Color.GREEN);
+        UIManager.put("TextField.font", new Font("Monospaced", Font.PLAIN, 16));
+    }
 
     public List<Jogador> carregarRanking() {
         List<Jogador> ranking = new ArrayList<>();
@@ -94,15 +119,18 @@ public class RankingService {
         exibirRanking(null);
     }
 
+
+
     public void exibirRanking(Frame owner) {
         List<Jogador> ranking = carregarRanking();
         ranking.sort(Comparator.comparingInt(Jogador::getPontuacao).reversed());
 
-        final StringBuilder rankingTextBuilder = new StringBuilder();
-        rankingTextBuilder.append("======= RANKING DE JOGADORES =======\n\n");
+        StringBuilder rankingTextBuilder = new StringBuilder();
+        rankingTextBuilder.append("<html><div style='text-align: center; color: green; font-family: Monospaced;'>");
+        rankingTextBuilder.append("<h2>RANKING DE JOGADORES</h2><br>");
 
         if (ranking.isEmpty()) {
-            rankingTextBuilder.append("Ainda não há jogadores no ranking.\n");
+            rankingTextBuilder.append("Ainda não há jogadores no ranking.<br>");
         } else {
             for (int i = 0; i < ranking.size(); i++) {
                 Jogador jogador = ranking.get(i);
@@ -114,24 +142,26 @@ public class RankingService {
                         case 2: medalha = "🥉 "; break;
                     }
                 }
-                rankingTextBuilder.append(String.format("%2d. %s%s - %d pontos\n",
+                rankingTextBuilder.append(String.format("%2d. %s%s - %d pontos<br>",
                         (i + 1),
                         medalha,
                         jogador.getNick(),
                         jogador.getPontuacao()));
             }
         }
+        rankingTextBuilder.append("</div></html>");
 
         SwingUtilities.invokeLater(() -> {
             JDialog rankingDialog = new JDialog(owner, "Ranking de Jogadores", true);
             rankingDialog.setLayout(new BorderLayout(10, 10));
 
-            JTextArea textArea = new JTextArea(rankingTextBuilder.toString());
-            textArea.setEditable(false);
-            textArea.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 14));
-            textArea.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+            JLabel rankingLabel = new JLabel(rankingTextBuilder.toString());
+            rankingLabel.setHorizontalAlignment(SwingConstants.CENTER);
+            rankingLabel.setBackground(Color.BLACK);
+            rankingLabel.setOpaque(true);
 
-            JScrollPane scrollPane = new JScrollPane(textArea);
+            JScrollPane scrollPane = new JScrollPane(rankingLabel);
+            scrollPane.setBackground(Color.BLACK);
             rankingDialog.add(scrollPane, BorderLayout.CENTER);
 
             JButton okButton = new JButton("OK");
