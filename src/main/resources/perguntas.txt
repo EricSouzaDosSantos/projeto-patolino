@@ -1,14 +1,191 @@
 Qual comando é usado para exibir algo no console em Java? | echo | System.out.println() | printf() | print() | System.out.println() | Java Básico
 Qual das opções abaixo representa um comentário de uma linha em Java? | // comentário | <!-- comentário --> | \* comentário *\ | # comentário | // comentário | Java Básico
+Como comentamos múltiplas linhas em Java? | /* ... */ | <!-- --> | // | # | /* ... */ | Java Básico
+Qual desses é um tipo numérico? | double | String | char | boolean | double | Java Básico
+Qual tipo representa verdadeiro ou falso? | char | double | boolean | int | boolean | Java Básico
+Como comentamos múltiplas linhas em Java? | // | /* ... */ | # | <!-- --> | /* ... */ | Java Básico
+Qual função imprime texto no console? | System.out.println() | write() | echo | printf() | System.out.println() | Java Básico
+Qual o resultado de 10 % 2 em Java? | 2 | 10 | 20 | 5 | 2 | Java Básico
+Como comentamos múltiplas linhas em Java? | // | <!-- --> | /* ... */ | # | /* ... */ | Java Básico
+Qual função imprime texto no console? | echo | write() | System.out.println() | printf() | System.out.println() | Java Básico
+O que faz o comando `System.exit(0)`? | Encerra a JVM | Inicia o programa | Pausa a execução | Reinicia o programa | Encerra a JVM | Java Básico
+Qual método usamos para ler entradas do console? | Scanner.nextLine() | Console.read() | Input.read() | Buffer.read() | Scanner.nextLine() | Java Básico
+Como declaramos um método que retorna um inteiro? | int metodo() | void metodo() | return metodo() | método:int() | int metodo() | Java Básico
+Qual palavra reservada define o pacote de uma classe? | package | import | namespace | module | package | Java Básico
+Como exibimos o valor de uma variável sem quebra de linha? | print() | println() | printf() | echo() | print() | Java Básico
+O que é literal em Java? | Valor explícito | Variável | Método | Objeto | Valor explícito | Java Básico
+Como escrevemos uma string multilinha? | """texto""" | '''texto''' | "linha1\nlinha2" | `texto` | "linha1\nlinha2" | Java Básico
+Qual símbolo inicia uma instrução de anotação? | @ | # | $ | & | @ | Java Básico
+O que `null` representa em Java? | Ausência de objeto | Objeto vazio | String vazia | Zero | Ausência de objeto | Java Básico
+Qual é a extensão padrão de arquivos de classe? | .class | .java | .jar | .exe | .class | Java Básico
+Como invocamos o construtor da superclasse? | super() | this() | parent() | base() | super() | Java Básico
+Qual é o delimitador de pacote em import? | . | / | \ | : | . | Java Básico
+O que acontece ao chamar `toString()`? | Retorna representação em texto | Imprime no console | Lança exceção | Cria novo objeto | Retorna representação em texto | Java Básico
+Como concatenamos números com strings? | + | & | concat() | format() | + | Java Básico
+O que faz `System.gc()`? | Sugere coleta de lixo | Gera erro | Fecha arquivo | Reinicia JVM | Sugere coleta de lixo | Java Básico
+Qual valor padrão de boolean em classe? | false | true | null | 0 | false | Java Básico
+Como chamamos métodos estáticos? | Classe.metodo() | objeto.metodo() | super.metodo() | this.metodo() | Classe.metodo() | Java Básico
+Como declarar constante de classe? | static final | const | constant | immutable | static final | Java Básico
+Que comando compila código Java? | javac | java | compile | run | javac | Java Básico
+Como executamos um .jar? | java -jar | java jar | run jar | jar run | java -jar | Java Básico
+O que faz o compilador javac? | Executa o programa | Converte bytecode em código nativo | Converte código-fonte Java em bytecode | Gerencia dependências | Converte código-fonte Java em bytecode | Java Básico
+Qual arquivo contém o ponto de entrada padrão de um programa Java? | App.java | Main.java | Program.java | Java.java | Main.java | Java Básico
+Qual comando inicia a JVM para rodar um programa compilado? | javac | runjava | java | jvm | java | Java Básico
+Qual extensão têm os arquivos de bytecode Java? | .class | .java | .jar | .exe | .class | Java Básico
+Para que serve o comando java -version? | Atualizar o Java | Mostrar versão instalada | Desinstalar o JRE | Compilar código | Mostrar versão instalada | Java Básico
+Qual diretiva usamos em Java para organizar classes em grupos lógicos? | package | group | module | namespace | package | Java Básico
+Como importamos classes de outros pacotes? | include pacote.* | use pacote.* | import pacote.* | require pacote.* | import pacote.* | Java Básico
+Qual versão mínima de Java introduziu o var para inferência local? | Java 8 | Java 10 | Java 9 | Java 11 | Java 10 | Java Básico
+O que é JDK? | Java Development Kit | Java Debug Kit | Java Deployment Kit | Java Design Kit | Java Development Kit | Java Básico
+O que é JRE? | Java Runtime Environment | Java Resource Edition | Java Runtime Extension | Java Remote Engine | Java Runtime Environment | Java Básico
+Qual arquivo JAR padrão inclui a biblioteca padrão do Java? | rt.jar | lib.jar | std.jar | java.jar | rt.jar | Java Básico
+O que significa JVM? | Java Virtual Machine | Java Visual Machine | Java Variable Manager | Java Version Manager | Java Virtual Machine | Java Básico
+Qual ferramenta checa estilo e potenciais erros no código? | javadoc | jdb | javap | Checkstyle | Checkstyle | Java Básico
+Como geramos a documentação a partir de comentários? | javac –doc | javadoc | java –doc | jd | javadoc | Java Básico
+Qual comando empacota classes em um arquivo executável? | jar | pack | zip | bundle | jar | Java Básico
+Qual opção do javac gera arquivos .class em outro diretório? | –out | –dest | –sourcepath | –d | –d | Java Básico
+Como executamos um JAR com classe Main especificada no manifesto? | java -jar nome.jar | jar -run nome.jar | run -jar nome.jar | java run nome.jar | java -jar nome.jar | Java Básico
+Qual ferramenta de depuração nativa do JDK? | jdb | jinspector | jtrace | jdebug | jdb | Java Básico
+Para que serve o comando javap? | Descompilar source | Listar métodos e campos de classe | Executar bytecode | Compilar classes | Listar métodos e campos de classe | Java Básico
+Em qual diretório instalamos geralmente o JDK no Windows? | C:\Program Files\Java\jdk | C:\Windows\Java | C:\Java\JDK | C:\Archivos de Programa\Java | C:\Program Files\Java\jdk | Java Básico
+
 Como declaramos uma variável inteira em Java? | int numero = 10; | integer numero = 10; | num numero = 10; | integer numero; | int numero = 10; | Variáveis
 Qual dos seguintes tipos primitivos armazena números decimais? | int | float | char | boolean | float | Variáveis
 Qual palavra-chave usamos para definir que uma variável não pode mudar seu valor? | static | final | const | let | final | Variáveis
 O que representa o tipo char em Java? | Uma palavra | Um número | Um caracterer | Um texto | Um caracterer | Variáveis
+Qual palavra-chave usamos para declarar variáveis? | define | var | let | int | int | Variáveis
+Qual tipo armazena texto? | char | word | String | text | String | Variáveis
+Qual palavra-chave usamos para declarar variáveis? | int | let | var | define | int | Variáveis
+É possível alterar o valor de uma variável final? | Sim | Apenas em métodos | Não | Somente em classes | Não | Variáveis
+É possível alterar o valor de uma variável final? | Não | Sim | Apenas em métodos | Somente em classes | Não | Variáveis
+Qual tipo armazena um único caractere? | char | boolean | String | byte | char | Variáveis
+Como se concatena texto em Java? | concat() | * | & | + | + | Variáveis
+Qual palavra-chave usamos para declarar variáveis? | define | int | let | var | int | Variáveis
+É possível alterar o valor de uma variável final? | Sim | Não | Somente em classes | Apenas em métodos | Não | Variáveis
+Qual tipo armazena um único caractere? | String | byte | boolean | char | char | Variáveis
+Qual tipo armazena um único caractere? | byte | char | boolean | String | char | Variáveis
+Qual é o valor padrão de um campo int em uma classe? | 0 | null | 1 | –1 | 0 | Variáveis
+Qual escopo tem uma variável declarada dentro de um método? | Global | Classe | Local | Pacote | Local | Variáveis
+Qual wrapper corresponde ao tipo primitivo double? | Double | Float | BigDecimal | Decimal | Double | Variáveis
+Como obtemos o valor máximo de um int? | Integer.MAX | Integer.MAX_VALUE | Integer.MAX_INT | Integer.LIMIT | Integer.MAX_VALUE | Variáveis
+Qual palavra reservada descarta referência de objeto para permitir GC? | null | delete | remove | undef | null | Variáveis
+Qual convenção para nomes de variáveis em Java? | PascalCase | snake_case | camelCase | kebab-case | camelCase | Variáveis
+Qual modificador impede acesso fora da própria classe? | protected | package | default | private | private | Variáveis
+Qual modificador permite acesso apenas dentro do pacote? | public | package-private | private | protected | default (ou package-private) | Variáveis
+Como declaramos uma constante em Java? | const int X = 5; | final int X = 5; | static X = 5; | constant int X = 5; | final int X = 5; | Variáveis
+Qual tipo é usado para armazenar valores booleanos? | Bit | bool | Boolean | boolean | boolean | Variáveis
+É permitido declarar múltiplas variáveis em uma só linha? | Sim | Não | Apenas em Strings | Apenas em arrays | Sim | Variáveis
+Qual palavra-chave usamos para variáveis que não pertencem a instâncias? | this | final | static | super | static | Variáveis
+Qual tipo armazena números inteiros grandes (64 bits)? | int | long | short | byte | long | Variáveis
+Qual tipo primitivo ocupa 1 byte? | byte | short | char | int | byte | Variáveis
+Qual tipo primitivo armazena caracteres Unicode (16 bits)? | String | char | byte | int | char | Variáveis
+Como declaramos um array de inteiros? | int[] nums; | ints nums[]; | array nums; | int nums; | int[] nums; | Variáveis
+Como inicializamos um array de Strings com 3 posições? | new String(3); | new String[3]; | new String{3}; | new String<>; | new String[3]; | Variáveis
+Qual método converte String em inteiro? | Integer.parseInt() | String.toInt() | parseInt() | toInteger() | Integer.parseInt() | Variáveis
+Qual operador usamos para aumentar em 1 uma variável i? | i =+ 1 | ++i | i ?+ 1 | i += | ++i | Variáveis
+Como criamos uma variável float literal? | float f = 3.14; | float f = 3.14f; | float f = 3,14; | float f = 3.14d; | float f = 3.14f; | Variáveis
+Qual é o valor padrão de um campo de instância que é objeto? | null | 0 | "" | false | null | Variáveis
+Como declarar duas variáveis int numa única linha? | int a, b; | int a; int b; | int a & b; | int[] a,b; | int a, b; | Variáveis
+Como inicializar um boolean? | boolean b = true; | Boolean b = true; | bool b = true; | boolean b = "true"; | boolean b = true; | Variáveis
+Qual o tamanho de um short em bits? | 16 bits | 8 bits | 32 bits | 64 bits | 16 bits | Variáveis
+Qual tipo textual é imutável em Java? | StringBuilder | String | StringBuffer | CharSequence | String | Variáveis
+Qual wrapper corresponde ao primitivo char? | Character | Char | CharBox | CharWrapper | Character | Variáveis
+Qual método devolve o comprimento de uma String? | length() | size() | length | getLength() | length() | Variáveis
+Como converter double em int com truncamento? | int i = (int) d; | int i = toInt(d); | int i = d; | int i = Double.parseInt(d); | int i = (int) d; | Variáveis
+O que o modificador final faz em variáveis de referência? | Impede reatribuição da referência | Torna campos imutáveis | Imprime valor | Remove GC | Impede reatribuição da referência | Variáveis
+Como declarar variável de ponto flutuante de dupla precisão? | float f; | double d; | real d; | Double d; | double d; | Variáveis
+Como Java passa argumentos para métodos? | Por valor | Por referência | Por ponteiro | Ambos | Por valor | Variáveis
+Como obter o valor mínimo de um long? | Long.MIN_VALUE | Long.MIN | Long.MINVAL | MIN_VALUE | Long.MIN_VALUE | Variáveis
+Como inicializar array de inteiros inline? | int[] a = {1,2,3}; | int[] a = new int{1,2,3}; | int a[] = (1,2,3); | int a[] = [1,2,3]; | int[] a = {1,2,3}; | Variáveis
+Qual o tamanho de um float em bits? | 32 | 16 | 8 | 64 | 32 | Variáveis
+Como declarar variável de array de objetos? | Classe[] arr; | Classe arr[ ]; | Object arr[]; | Array<Classe> arr; | Classe[] arr; | Variáveis
+
+Qual estrutura repete enquanto condição for verdadeira? | switch | while | for | if | while | Estruturas de controle
+Qual estrutura é usada para decisão binária? | switch | if | for | while | if | Estruturas de controle
+Qual estrutura é usada para decisão binária? | for | if | while | switch | if | Estruturas de controle
+Quantas vezes do-while executa antes de checar a condição? | Até 0 vezes | 1 vez | 2 vezes | Depende | 1 vez | Estruturas de controle
+Qual cláusula é opcional em um try-catch-finally? | catch | try | finally | todas são obrigatórias | finally | Estruturas de controle
+Como usamos continue em loops rotulados? | continue label; | continue (label); | goto label; | break label; | continue label; | Estruturas de controle
+Como definimos um label para um loop? | label: for(...) | for(...): label | for label(...) | #label for | label: for(...) | Estruturas de controle
+O que acontece se um case em switch não tiver break? | Continua no próximo case | Sai do switch | Erro de compilação | Executa apenas aquele case | Continua no próximo case | Estruturas de controle
+Como tratar múltiplas exceções no mesmo catch? | catch(Exception1 | Exception2 e) | catch(Exception1, Exception2 e) | catch(Exception1 & Exception2 e) | catch(Exception1; Exception2 e) | catch(Exception1 | Exception2 e) | Estruturas de controle
+Sintaxe de múltiplos case em switch Java 14+? | case 1,2,3 -> … | case 1|2|3: … | case (1,2,3): … | case {1,2,3}: … | case 1,2,3 -> … | Estruturas de controle
+Em que situação break sem label atua? | No switch ou loop atual | Apenas em switch | Apenas em loop | Não é válido | No switch ou loop atual | Estruturas de controle
+Qual comando encerra um método imediatamente? | exit() | stop() | return | break | return | Estruturas de controle
+Qual palavra-chave lança uma exceção? | throw | throws | catch | finally | throw | Estruturas de controle
+Onde declaramos throws para indicar que um método pode lançar exceção? | No método | No loop | No switch | No catch | No método | Estruturas de controle
+Qual bloco executa apenas quando uma exceção ocorre? | try | catch | finally | then | catch | Estruturas de controle
+Como criar um bloco que sempre executa após try ou catch? | catch | finally | after | then | finally | Estruturas de controle
+Qual a diferença entre while e do-while? | do-while executa antes de checar; while checa antes | while executa antes de checar; do-while checa antes | São idênticos | do-while nunca executa | do-while executa antes de checar; while checa antes | Estruturas de controle
+Como interromper a execução de um try sem lançar exceção? | return | break | continue | throw | return | Estruturas de controle
+Qual operador lógico usamos para condições compostas E? | and | AND | && | || | && | Estruturas de controle
+Como aninhar corretamente dois if? | if(a) if(b) {} | if(a && b) {} | switch(a) case b: | loop | if(a) if(b) {} | Estruturas de controle
+Como sair de múltiplos loops aninhados sem exceção? | break 2; | break; | continue; | return; | return; | Estruturas de controle
+Qual estrutura percorre diretamente elementos de uma coleção? | for | foreach | for-each | while | for-each | Estruturas de controle
+Qual palavra-chave salta para o próximo caso em switch sem executar todos? | jump | break | continue | fallthrough | break | Estruturas de controle
+Qual sintaxe correta de switch em Java 14 (arrow)? | case x -> … | case x: -> … | case x => … | case x ~> … | case x -> … | Estruturas de controle
+Qual estrutura é melhor para, por exemplo, menu de opções discretas? | while | for | switch | if | switch | Estruturas de controle
+O que faz continue dentro de um loop? | Termina o loop | Pula para próxima iteração | Sai do método | Pula todo o código | Pula para próxima iteração | Estruturas de controle
+Em um for (int i=0; i<10; i++), quando ocorre i++? | Antes do corpo | Durante o corpo | Após o corpo | Nunca | Após o corpo | Estruturas de controle
+Qual estrutura repete por índice até condição falsa? | while | do-while | for | switch | for | Estruturas de controle
+Como usamos break em um switch para agrupar casos? | Não usamos | Caso sem break cai no próximo | break-continue | return | Caso sem break cai no próximo | Estruturas de controle
+Qual o valor de i apos for(int i=0;i<3;i++);? | 2 | 3 | 4 | 0 | 3 | Estruturas de controle
+Em que situação preferir do-while em vez de while? | Condição falsa inicial | Quando body deve rodar ao menos uma vez | Laço infinito | Nunca | Quando body deve rodar ao menos uma vez | Estruturas de controle
+Qual síntaxe de if com múltiplas condições? | if(a && b) | if(a and b) | if(a & b) | if(a,b) | if(a && b) | Estruturas de controle
+É possível usar switch com String? | Sim | Não | Apenas em Java 8 | Apenas em Java 6 | Sim | Estruturas de controle
+Qual bloco executa sempre após try e catch? | catch | try | finally | end | finally | Estruturas de controle
+O quê devolve uma expressão switch em Java 14+? | Valor | Exception | Nenhum | boolean | Valor | Estruturas de controle
+Como interromper apenas o laço atual? | break | return | continue | throw | break | Estruturas de controle
+Qual laço é ideal para iterar lista pelo índice? | for-each | for | while | do-while | for | Estruturas de controle
+Como criar um loop infinito? | for(;;) | while(false) | do{}while(false) | for(int i=0;i<1;i++) | for(;;) | Estruturas de controle
+Qual estrutura repete enquanto condição for verdadeira? | if | switch | for | while | while | Estruturas de controle
+O que faz o comando continue? | Pula para próxima iteração | Reinicia o loop | Sai do loop | Interrompe o programa | Pula para próxima iteração | Estruturas de controle
+Qual estrutura de repetição é usada para executar um bloco enquanto uma condição for verdadeira e você não souber a quantidade de repetições? | for | while | do-while | switch | while | Estruturas de controle
+O que faz a instrução break dentro de um loop? | Continua a próxima repetição | Finaliza o loop imediatamente | Reinicia o loop | Nenhuma das anteriores | Finaliza o loop imediatamente | Estruturas de controle
+
 Qual o operador lógico "||" representa em Java? | E | OU | NOT | Negação | OU | Operadores
 O que o operador == faz em Java com objetos? | Compara valores | Atribui valor | Compara endereços de memória | Nenhuma das anteriores | Compara endereços de memória | Operadores
 Qual operador usamos para adicionar dois valores numéricos? | + | & | % | * | + | Operadores
-Qual estrutura de repetição é usada para executar um bloco enquanto uma condição for verdadeira e você não souber a quantidade de repetições? | for | while | do-while | switch | while | Estruturas de controle
-O que faz a instrução break dentro de um loop? | Continua a próxima repetição | Finaliza o loop imediatamente | Reinicia o loop | Nenhuma das anteriores | Finaliza o loop imediatamente | Estruturas de controle
+O que o operador != representa? | Menor | Igual | Maior | Diferente | Diferente | Operadores
+Qual operador representa AND lógico? | ! | & | || | && | && | Operadores
+Qual operador representa AND lógico? | || | ! | & | && | && | Operadores
+Como se faz incremento em Java? | +1 | ++ | += | -- | ++ | Operadores
+Qual operador faz divisão inteira? | / | // | div | % | / | Operadores
+Qual operador retorna o resto de uma divisão? | % | mod | // | {*} | % | Operadores
+Qual é o operador de negação lógica? | not | ~ | ! | != | ! | Operadores
+Qual operador compara dois valores por ordem? | == | = | equals() | compareTo() | == | Operadores
+Qual operador faz atribuição composta e soma? | =+ | += | ++ | –= | += | Operadores
+Qual operador faz deslocamento de bits à esquerda? | >> | <<< | << | &< | << | Operadores
+Qual operador faz deslocamento de bits à direita mantendo sinal? | >>> | >> | << | <> | >> | Operadores
+Qual operador XOR bit a bit? | & | ^ | % | | | ^ | Operadores
+Qual operador bit a bit faz AND? | & | && | and | | | & | Operadores
+Qual operador bit a bit faz OR? | | | || | or | || | | (pipe) | Operadores
+Qual operador verifica se dois objetos são o mesmo? | equals() | == | compare() | is() | == | Operadores
+Qual operador é usado para casting explícito? | cast() | (tipo) | as | to | (tipo) | Operadores
+Qual operador unário inverte o sinal? | ~ | ! | - | ++ | - | Operadores
+Qual operador unário incrementa pós-fixado? | ++i | i++ | i+ | ++ | i++ | Operadores
+Qual operador unário decrementa pré-fixado? | --i | i-- | i-= | dec() | --i | Operadores
+Qual operador ternário escolhe entre duas opções? | if() | ? : | switch | then | ? : | Operadores
+Em a += b, qual operação ocorre? | a = a * b | a = b – a | a = a + b | a = b + a | a = a + b | Operadores
+Qual operador compara objetos em ordem lexicográfica? | == | compareTo() | equals() | instanceof | compareTo() | Operadores
+Qual operador testa se um objeto é instância de uma classe? | instanceof | is | typeOf | typeof | instanceof | Operadores
+Qual operador faz OR bit a bit? | & | ^ | | | | | Operadores
+Qual operador faz multiplicação? | * | x | . | : | * | Operadores
+Qual operador realiza subtração composta? | -= | += | *= | /= | -= | Operadores
+Qual operador bit a bit inverte todos os bits? | ~ | ! | ^ | & | ~ | Operadores
+Qual operador condicional avalia e retorna um valor? | if | switch | ?: | while | ?: | Operadores
+Qual operador é usado para acesso a elementos de array? | [] | () | {} | <> | [] | Operadores
+Qual operador é usado para chamar métodos em objetos? | -> | :: | . | ->> | . | Operadores
+Qual operador une duas strings? | + | && | || | . | + | Operadores
+Qual método ou operador compara conteúdo de duas String? | equals() | == | compareTo() | equalsIgnoreCase() | equals() | Operadores
+Qual operador verifica se dois objetos não são iguais? | != | equals() | !== | <> | != | Operadores
+Qual operador aritmético tem precedência mais alta? | + | * | - | / | * | Operadores
+Qual operador desloca bits à direita sem preservar sinal? | >>> | >> | << | &= | >>> | Operadores
+Qual operador de comparação verifica se um valor é menor ou igual a outro? | <= | < | >= | > | <= | Operadores
+Qual operador de comparação verifica se um valor é maior que outro? | > | < | >= | <= | > | Operadores
+Qual operador avalia ambas as expressões, mesmo que a primeira seja falsa? | & | && | || | | | & | Operadores
+Qual operador faz atribuição e multiplicação? | = | = | **= | = | *= | Operadores
+
 Qual dessas palavras-chave é usada para herança em Java? | implement | super | extends | this | extends | POO
 Qual método é o ponto de entrada de um programa Java? | init() | start() | main() | run() | main() | POO
 Qual palavra-chave define um método que pertence à classe e não a uma instância? | public | static | final | void | static | POO
@@ -16,40 +193,48 @@ Qual palavra-chave é usada para criar uma classe em Java? | create | define | c
 Qual é o tipo de retorno de um método que não retorna nada? | null | empty | void | 0 | void | POO
 Qual palavra-chave usamos para criar um objeto de uma classe? | build | new | object | create | new | POO
 Qual é a função do bloco try-catch? | Criar variáveis | Repetir código | Tratar exceções | Executar um bloco de código | Tratar exceções | POO
-Qual palavra-chave usamos para declarar variáveis? | define | var | let | int | int | Variáveis
 Qual palavra-chave torna um método comum a todos os objetos? | static | super | final | this | static | POO
 Como criamos um objeto? | this | object | new | super | new | POO
-Como comentamos múltiplas linhas em Java? | // | /* ... */ | # | <!-- --> | /* ... */ | Java Básico
-Qual tipo armazena texto? | char | word | String | text | String | Variáveis
-Qual estrutura repete enquanto condição for verdadeira? | if | switch | for | while | while | Estruturas de controle
-Qual função imprime texto no console? | System.out.println() | write() | echo | printf() | System.out.println() | Java Básico
 O que é polimorfismo? | Métodos com mesmo nome se comportando diferente | Herança múltipla | Atribuição dinâmica | Uso de interfaces | Métodos com mesmo nome se comportando diferente | POO
-Qual o resultado de 10 % 2 em Java? | 2 | 10 | 20 | 5 | 2 | Java Básico
-Qual palavra-chave usamos para declarar variáveis? | int | let | var | define | int | Variáveis
-O que o operador != representa? | Menor | Igual | Maior | Diferente | Diferente | Operadores
-Qual operador representa AND lógico? | ! | & | || | && | && | Operadores
-É possível alterar o valor de uma variável final? | Não | Sim | Apenas em métodos | Somente em classes | Não | Variáveis
-Qual operador representa AND lógico? | || | ! | & | && | && | Operadores
-Qual estrutura é usada para decisão binária? | for | if | while | switch | if | Estruturas de controle
-É possível alterar o valor de uma variável final? | Sim | Apenas em métodos | Não | Somente em classes | Não | Variáveis
-Como se concatena texto em Java? | concat() | * | & | + | + | Variáveis
+Qual palavra-chave referencia o objeto atual? | this | super | self | current | this | POO
+Como chamamos o construtor da superclasse dentro de um construtor? | super() | this() | base() | parent() | super() | POO
+Qual modificador permite sobrescrever métodos em subclasses? | final | override | @Override | virtual | @Override | POO
+Qual tipo de classe não pode ser instanciado? | normal | abstract | final | sealed | abstract | POO
+Como definimos uma interface funcional para lambdas? | @Functional | @Interface | @FunctionalInterface | @Lambda | @FunctionalInterface | POO
+O que é composição? | Herança múltipla | Objeto possui referência a outro | Classe final | Classe abstrata | Objeto possui referência a outro | POO
+Qual princípio proíbe acoplamento forte? | Herança | Encapsulamento | DIP (Dependency Inversion) | ISP | DIP | POO
+Como definimos múltiplas interfaces numa classe? | implements I1, I2 | extends I1, I2 | implements I1 & I2 | extends I1 & I2 | implements I1, I2 | POO
+Qual anotação documenta herança em Java? | @Inheritance | @Inherited | @Inherit | @Super | @Inherited | POO
+Qual é o padrão usado para criar objetos passo a passo? | Factory | Builder | Singleton | Observer | Builder | POO
+Qual padrão garante instância única de uma classe? | Factory | Builder | Singleton | Prototype | Singleton | POO
+O que faz protected em herança? | Visível só na própria classe | Visível em pacotes e subclasses | Visível apenas no pacote | Visível sempre | Visível em pacotes e subclasses | POO
+Qual método padrão de Object retornamos ao imprimir objeto? | toString() | print() | show() | display() | toString() | POO
+O que faz @Deprecated numa classe? | Remove | Desencoraja uso futuro | Torna final | Ignora | Desencoraja uso futuro | POO
+Como chamamos construtor alternativo na mesma classe? | super() | this() | base() | parent() | this() | POO
+Qual classe pode ser usada para mapear chave-valor generics? | ArrayList | HashMap | TreeSet | LinkedList | HashMap | POO
+Qual modificador impede que uma classe seja estendida? | final | static | abstract | private | final | POO
+Como definimos método que deve ser implementado por subclasses? | abstract void m(); | void m(); | final void m(); | static void m(); | abstract void m(); | POO
+O que é polimorfismo de inclusão? | Sobrecarga de métodos | Objeto de subclass trata-se como superclass | Casting | Lambdas | Objeto de subclass trata-se como superclass | POO
+Qual interface define método compare() para ordenação? | Comparator | Comparable | Compare | Sorting | Comparator | POO
 Como criamos um objeto? | object | this | super | new | new | POO
-Qual tipo armazena um único caractere? | char | boolean | String | byte | char | Variáveis
-Como comentamos múltiplas linhas em Java? | // | <!-- --> | /* ... */ | # | /* ... */ | Java Básico
 O que é encapsulamento? | Herdar atributos | Instanciar objetos | Ocultar detalhes internos de implementação | Sobrescrever métodos | Ocultar detalhes internos de implementação | POO
 O que é polimorfismo? | Métodos com mesmo nome se comportando diferente | Atribuição dinâmica | Uso de interfaces | Herança múltipla | Métodos com mesmo nome se comportando diferente | POO
 O que é polimorfismo? | Atribuição dinâmica | Métodos com mesmo nome se comportando diferente | Herança múltipla | Uso de interfaces | Métodos com mesmo nome se comportando diferente | POO
-O que faz o comando continue? | Pula para próxima iteração | Reinicia o loop | Sai do loop | Interrompe o programa | Pula para próxima iteração | Estruturas de controle
 Qual palavra define herança em Java? | inherits | extends | super | this | extends | POO
 Qual palavra-chave torna um método comum a todos os objetos? | final | super | this | static | static | POO
-Qual tipo armazena um único caractere? | byte | char | boolean | String | char | Variáveis
-Qual estrutura repete enquanto condição for verdadeira? | switch | while | for | if | while | Estruturas de controle
-Qual palavra-chave usamos para declarar variáveis? | define | int | let | var | int | Variáveis
-Qual função imprime texto no console? | echo | write() | System.out.println() | printf() | System.out.println() | Java Básico
-É possível alterar o valor de uma variável final? | Sim | Não | Somente em classes | Apenas em métodos | Não | Variáveis
-Qual tipo armazena um único caractere? | String | byte | boolean | char | char | Variáveis
-Qual estrutura é usada para decisão binária? | switch | if | for | while | if | Estruturas de controle
-Como comentamos múltiplas linhas em Java? | /* ... */ | <!-- --> | // | # | /* ... */ | Java Básico
-Qual desses é um tipo numérico? | double | String | char | boolean | double | Java Básico
-Qual tipo representa verdadeiro ou falso? | char | double | boolean | int | boolean | Java Básico
-Como se faz incremento em Java? | +1 | ++ | += | -- | ++ | Operadores
+Como definimos uma classe que não pode ser estendida? | final class C | sealed class C | static class C | abstract class C | final class C | POO
+Qual sintaxe acessa um campo da superclasse? | super.field | this.super.field | parent.field | this.field | super.field | POO
+O que faz o operador instanceof? | Verifica tipo de instância | Compara valores | Converte tipos | Cria instância | Verifica tipo de instância | POO
+Qual método usamos para clonar um objeto? | clone() | copy() | duplicate() | replicate() | clone() | POO
+Qual interface define coleção de elementos sem duplicatas? | List | Map | Set | Queue | Set | POO
+Qual interface mapeia chave para valor? | Collection | Map | List | Iterable | Map | POO
+O que faz o padrão Observer? | Notifica dependentes sobre mudanças | Cria cópias | Organiza objetos hierarquicamente | Agrega dados | Notifica dependentes sobre mudanças | POO
+Java suporta herança múltipla de classes? | Não | Sim | Apenas ab astratas | Apenas via generics | Não | POO
+Qual método devemos sobrescrever para igualdade lógica? | equals() | compareTo() | toString() | hashCode() | equals() | POO
+Qual padrão permite criar cópias de objetos via protótipo? | Prototype | Builder | Factory | Adapter | Prototype | POO
+Como definimos método com implementação padrão em interface (Java 8+)? | default void m(){} | void m() default{} | static void m(){} | body void m(){} | default void m(){} | POO
+O que caracteriza uma interface de marcação? | Não declara métodos | Declara apenas estáticos | Declara apenas default | Declara apenas privados | Não declara métodos | POO
+Qual implementação de Map mantém ordem de inserção? | HashMap | TreeMap | LinkedHashMap | Hashtable | LinkedHashMap | POO
+Qual implementação de Set mantém elementos ordenados? | HashSet | TreeSet | LinkedList | ArrayList | TreeSet | POO
+Como declaramos uma classe interna estática? | static class Inner{} | class static Inner{} | inner static class {} | static Inner{} | static class Inner{} | POO
+
