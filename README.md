@@ -46,8 +46,9 @@ O Projeto Patolino é um jogo de perguntas e respostas focado em Java, desenvolv
 Clone o repositório:
 
 ```bash
-git clone https://github.com/EricSouzaDosSantos/projeto-patolino.git## Contribuições
+git clone https://github.com/EricSouzaDosSantos/projeto-patolino.git
 ```
+## Contribuições
 Contribuições externas são bem-vindas! Para contribuir:
 
 1. Faça um fork deste repositório.
